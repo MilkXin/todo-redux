@@ -10,7 +10,6 @@ class TodoList extends Component {
         //关键代码-----------start
         this.state = store.getState();
         //关键代码-----------end
-        console.log(this.state)
         store.subscribe(this.storeChange) //订阅Redux的状态
     }
 
@@ -39,7 +38,8 @@ class TodoList extends Component {
                 <div>
 
                     <Input
-                        placeholder={this.state.inputValue}
+                        placeholder="Write Something"
+                        value={this.state.inputValue}
                         style={{ width: '250px', marginRight: '10px' }}
                         onChange={this.changeInputValue}
                     />
